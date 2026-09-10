@@ -1,0 +1,30 @@
+seed: 42
+
+data:
+  text_column: comment_text
+  labels:
+    - toxic
+    - severe_toxic
+    - obscene
+    - threat
+    - insult
+    - identity_hate
+  test_size: 0.10
+  val_size: 0.10
+  max_vocab_size: 50000
+  max_length: 200
+  min_frequency: 2
+
+model:
+  embedding_dim: 128
+  hidden_dim: 128
+  num_layers: 1
+  dropout: 0.30
+  bidirectional: true
+
+training:
+  epochs: 8
+  batch_size: 128
+  learning_rate: 0.001
+  weight_decay: 0.00001
+  patience: 2
