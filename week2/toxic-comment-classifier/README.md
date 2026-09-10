@@ -96,17 +96,3 @@ docker build -t toxic-classifier .
 docker run -p 8000:8000 toxic-classifier
 ```
 
-## Learning path
-
-Start with the code in this order:
-1. `config.yaml`
-2. `data/prepare.py`
-3. `features/vocab.py`
-4. `data/dataset.py`
-5. `models/lstm.py`
-6. `training/train.py`
-7. `evaluation/metrics.py`
-8. `app/main.py`
-9. Docker and GitHub Actions
-
-Do not treat the project as a black box: change one component at a time and rerun the tests/experiments.
