@@ -1,6 +1,6 @@
 # Task 3 — Fine-Tuning DistilBERT Using LoRA
 
-## 1. Assignment objective
+## 1. task :
 
 This project implements Task 3 using **DistilBERT + LoRA** for the same multi-label toxicity classification dataset.
 
@@ -158,9 +158,7 @@ reports/
 
 The assignment asks for comparison with the previous LSTM implementation.
 
-### Preferred method
 
-Use the metrics from your previous LSTM project and save them as:
 
 ```text
 reports/lstm_results.json
@@ -411,36 +409,7 @@ artifacts/lora_distilbert/
 
 It does not use a fake/demo prediction model.
 
----
 
-## 17. Final architecture
-
-```text
-                    ┌─────────────────────┐
-                    │   Streamlit UI      │
-                    │   User comment      │
-                    └──────────┬──────────┘
-                               │
-                               ▼
-                    ┌─────────────────────┐
-                    │ DistilBERT Tokenizer│
-                    └──────────┬──────────┘
-                               │
-                               ▼
-                    ┌─────────────────────┐
-                    │ DistilBERT + LoRA   │
-                    │ q_lin + v_lin       │
-                    └──────────┬──────────┘
-                               │
-                               ▼
-                    ┌─────────────────────┐
-                    │ 6 Toxicity Scores   │
-                    └──────────┬──────────┘
-                               │
-                               ▼
-                    ┌─────────────────────┐
-                    │ Results Dashboard   │
-                    └─────────────────────┘
 ```
 
 The complete engineering workflow is:
