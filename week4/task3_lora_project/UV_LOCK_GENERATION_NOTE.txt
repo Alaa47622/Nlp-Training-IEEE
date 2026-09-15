@@ -1,0 +1,41 @@
+uv lock could not be generated in this environment. Run `uv lock` after opening the project on a machine with package-index access.
+
+ #0. Sleeping 390.871619ms before the next attempt
+[33mWARN[39m Retry attempt #0. Sleeping 580.519759ms before the next attempt
+[33mWARN[39m Retry attempt #0. Sleeping 654.310462ms before the next attempt
+[33mWARN[39m Retry attempt #0. Sleeping 18.853952ms before the next attempt
+[33mWARN[39m Retry attempt #0. Sleeping 21.295958ms before the next attempt
+[33mWARN[39m Retry attempt #0. Sleeping 389.27177ms before the next attempt
+[33mWARN[39m Retry attempt #0. Sleeping 135.698781ms before the next attempt
+[33mWARN[39m Retry attempt #0. Sleeping 879.32789ms before the next attempt
+[33mWARN[39m Retry attempt #0. Sleeping 868.668275ms before the next attempt
+[33mWARN[39m Retry attempt #1. Sleeping 610.33569ms before the next attempt
+[33mWARN[39m Retry attempt #1. Sleeping 472.862148ms before the next attempt
+[33mWARN[39m Retry attempt #1. Sleeping 867.951148ms before the next attempt
+[33mWARN[39m Retry attempt #1. Sleeping 1.236658972s before the next attempt
+[33mWARN[39m Retry attempt #1. Sleeping 1.58279768s before the next attempt
+[33mWARN[39m Retry attempt #1. Sleeping 326.617155ms before the next attempt
+[33mWARN[39m Retry attempt #1. Sleeping 1.835729378s before the next attempt
+[33mWARN[39m Retry attempt #1. Sleeping 49.977997ms before the next attempt
+[33mWARN[39m Retry attempt #1. Sleeping 1.019131785s before the next attempt
+[33mWARN[39m Retry attempt #1. Sleeping 1.338316507s before the next attempt
+[33mWARN[39m Retry attempt #2. Sleeping 1.318244798s before the next attempt
+[33mWARN[39m Retry attempt #2. Sleeping 1.435124006s before the next attempt
+[33mWARN[39m Retry attempt #1. Sleeping 1.220043718s before the next attempt
+[33mWARN[39m Retry attempt #1. Sleeping 1.365936918s before the next attempt
+[33mWARN[39m Retry attempt #2. Sleeping 3.335726482s before the next attempt
+[33mWARN[39m Retry attempt #1. Sleeping 1.284455782s before the next attempt
+[33mWARN[39m Retry attempt #2. Sleeping 3.256285484s before the next attempt
+[33mWARN[39m Retry attempt #1. Sleeping 1.45665405s before the next attempt
+[33mWARN[39m Retry attempt #1. Sleeping 719.101352ms before the next attempt
+[33mWARN[39m Retry attempt #2. Sleeping 435.332354ms before the next attempt
+[33mWARN[39m Retry attempt #2. Sleeping 63.853628ms before the next attempt
+[33mWARN[39m Retry attempt #2. Sleeping 3.923986767s before the next attempt
+[33mWARN[39m Retry attempt #2. Sleeping 605.970997ms before the next attempt
+[33mWARN[39m Retry attempt #2. Sleeping 2.789826729s before the next attempt
+[1m[31merror[39m[0m: Request failed after 3 retries
+  [1m[31mCaused by[39m[0m: Failed to fetch: `https://pypi.org/simple/peft/`
+  [1m[31mCaused by[39m[0m: error sending request for url (https://pypi.org/simple/peft/)
+  [1m[31mCaused by[39m[0m: client error (Connect)
+  [1m[31mCaused by[39m[0m: dns error
+  [1m[31mCaused by[39m[0m: failed to lookup address information: Temporary failure in name resolution

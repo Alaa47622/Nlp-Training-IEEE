@@ -1,0 +1,11 @@
+services:
+  toxicity-ui:
+    build:
+      context: .
+      dockerfile: Dockerfile.ui
+    ports:
+      - "8501:8501"
+    volumes:
+      - ./artifacts:/app/artifacts:ro
+    environment:
+      - PYTHONUNBUFFERED=1

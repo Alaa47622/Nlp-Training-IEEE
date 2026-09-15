@@ -1,0 +1,43 @@
+stages:
+  preprocess:
+    cmd: uv run python src/preprocess.py
+    deps:
+      - data/raw/train.csv
+      - src/preprocess.py
+      - src/utils.py
+    params:
+      - data.input_csv
+      - data.processed_dir
+      - data.validation_size
+      - data.seed
+      - data.max_train_samples
+      - data.max_validation_samples
+    outs:
+      - data/processed/train.csv
+      - data/processed/validation.csv
+
+  train:
+    cmd: uv run python src/train.py
+    deps:
+      - data/processed/train.csv
+      - data/processed/validation.csv
+      - src/train.py
+      - src/utils.py
+    params:
+      - model
+      - training
+    outs:
+      - artifacts/lora_distilbert
+
+  evaluate:
+    cmd: uv run python src/evaluate.py
+    deps:
+      - artifacts/lora_distilbert
+      - data/processed/validation.csv
+      - src/evaluate.py
+      - src/utils.py
+    params:
+      - data.max_length
+      - training.threshold
+    outs:
+      - reports

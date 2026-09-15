@@ -1,0 +1,12 @@
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+.DS_Store
+artifacts/
+reports/*.png
+reports/*.json
+reports/*.csv
+data/processed/
+*.log

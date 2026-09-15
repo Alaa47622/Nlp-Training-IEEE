@@ -1,0 +1,48 @@
+name: CI-CD
+
+on:
+  push:
+    branches: ["main", "master"]
+  pull_request:
+    branches: ["main", "master"]
+
+jobs:
+  test-and-build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install uv
+        uses: astral-sh/setup-uv@v6
+        with:
+          enable-cache: true
+
+      - name: Set up Python
+        run: uv python install 3.11
+
+      - name: Install dependencies
+        run: uv sync --locked
+
+      - name: Lint
+        run: uv run ruff check src tests
+
+      - name: Run tests
+        run: uv run pytest
+
+      - name: Build training Docker image
+        run: docker build -t task3-lora-distilbert:${{ github.sha }} .
+
+      - name: Build Streamlit UI Docker image
+        run: docker build -f Dockerfile.ui -t task3-lora-ui:${{ github.sha }} .
+
+  # This job is deliberately a validation/deployment gate.
+  # Push to a registry can be enabled later by adding registry credentials.
+  deploy-gate:
+    needs: test-and-build
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deployment gate passed
+        run: echo "CI passed. Docker image is ready for deployment."
