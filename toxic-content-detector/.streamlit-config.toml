@@ -1,0 +1,6 @@
+# Optional Streamlit configuration reference.
+# Copy this file to .streamlit/config.toml if you want to customize the UI.
+[server]
+headless = true
+port = 8501
+address = "0.0.0.0"

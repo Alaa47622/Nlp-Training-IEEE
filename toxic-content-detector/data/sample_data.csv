@@ -1,0 +1,21 @@
+text,label
+"I really enjoyed this movie.",Non-Toxic
+"Thank you for helping me with my assignment.",Non-Toxic
+"I disagree with your opinion, but I respect it.",Non-Toxic
+"This is a useful and informative post.",Non-Toxic
+"Have a great day!",Non-Toxic
+"You are an idiot and nobody likes you.",Toxic
+"I hate you and your stupid comments.",Toxic
+"Stop harassing people in this community.",Toxic
+"You are worthless.",Toxic
+"Get lost, nobody wants you here.",Toxic
+"Could you explain this concept again?",Non-Toxic
+"Your answer is incorrect, but here is why.",Non-Toxic
+"That was a terrible idea.",Non-Toxic
+"You are disgusting and pathetic.",Toxic
+"I am angry about what happened.",Non-Toxic
+"You should be ashamed of yourself, idiot.",Toxic
+"Let's discuss the problem calmly.",Non-Toxic
+"This comment is hateful and abusive.",Toxic
+"I don't agree with this decision.",Non-Toxic
+"You are a complete fool.",Toxic
