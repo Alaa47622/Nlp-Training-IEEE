@@ -1,27 +1,5 @@
 # Toxic Content Detection — Task 2 + Task 3
 
-A beginner-friendly Toxic Content Detection application built with **LangChain, OpenRouter, Streamlit, uv, and Docker**.
-
-## Assignment coverage
-
-### Task 2 — LangChain + OpenRouter + Streamlit
-- Accept user-provided text.
-- Send the text through a LangChain prompt.
-- Use an LLM through OpenRouter.
-- Classify the input as **Toxic** or **Non-Toxic**.
-- Show a short explanation.
-- Provide a simple Streamlit web interface.
-
-### Task 3 — Docker
-- Dockerize the application.
-- Install dependencies using **uv**.
-- Keep the OpenRouter API key outside the image.
-- Expose Streamlit on port `8501`.
-- Run the application inside a Docker container.
-
-## Where is uv?
-
-`uv` is the Python project/dependency manager for this project. It is configured in `pyproject.toml` and the project pins Python 3.12 in `.python-version`.
 
 Use:
 
@@ -169,65 +147,4 @@ LLM
 Toxic / Non-Toxic + explanation
 ```
 
-## 9. Screenshots for submission
-
-Save your real screenshots in the `screenshots/` folder.
-
-### Screenshot 1 — Project structure
-
-Show VS Code with:
-- `app/`
-- `data/`
-- `Dockerfile`
-- `pyproject.toml`
-- `uv.lock` after running `uv sync`
-
-### Screenshot 2 — Streamlit UI
-
-Show the browser with the Toxic Content Detector interface.
-
-### Screenshot 3 — Non-Toxic result
-
-Use an example such as:
-
-```text
-I really enjoyed this movie.
-```
-
-Show the **Non-Toxic** classification and explanation.
-
-### Screenshot 4 — Toxic result
-
-Use an example from `data/sample_data.csv` and show the **Toxic** classification.
-
-### Screenshot 5 — Docker build
-
-Show:
-
-```text
-docker build -t toxic-content-detector .
-```
-
-ending successfully.
-
-### Screenshot 6 — Docker container
-
-Show:
-
-```text
-docker run --env-file .env -p 8501:8501 toxic-content-detector
-```
-
-### Screenshot 7 — Browser through Docker
-
-Show the Streamlit UI at:
-
-```text
-http://localhost:8501
-```
-
-while the Docker container is running.
-
-## Security note
-
-The OpenRouter API key is supplied at runtime using `.env`. It is not copied into the Docker image and `.env` is excluded by `.gitignore`.
+to the Docker image and `.env` is excluded by `.gitignore`.
