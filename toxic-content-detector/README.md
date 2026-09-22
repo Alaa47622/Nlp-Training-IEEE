@@ -147,4 +147,4 @@ LLM
 Toxic / Non-Toxic + explanation
 ```
 
-to the Docker image and `.env` is excluded by `.gitignore`.
+to the Docker image and `.env` is excluded by `.gitignore`
