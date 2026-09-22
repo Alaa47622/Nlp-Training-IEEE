@@ -32,8 +32,6 @@ toxic-content-detector/
 │   └── main.py
 ├── data/
 │   └── sample_data.csv
-├── screenshots/
-│   └── README.md
 ├── tests/
 │   └── test_classifier.py
 ├── .dockerignore
