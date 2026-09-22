@@ -1,0 +1,37 @@
+data:
+  input_csv: data/raw/train.csv
+  processed_dir: data/processed
+  max_length: 128
+  validation_size: 0.10
+  seed: 42
+  max_train_samples: 30000
+  max_validation_samples: 5000
+
+model:
+  name: distilbert-base-uncased
+  num_labels: 6
+  problem_type: multi_label_classification
+  lora_r: 8
+  lora_alpha: 16
+  lora_dropout: 0.10
+  target_modules:
+    - q_lin
+    - v_lin
+
+training:
+  output_dir: artifacts/lora_distilbert
+  num_train_epochs: 2
+  learning_rate: 0.0002
+  per_device_train_batch_size: 16
+  per_device_eval_batch_size: 32
+  gradient_accumulation_steps: 2
+  weight_decay: 0.01
+  warmup_ratio: 0.05
+  logging_steps: 100
+  eval_strategy: epoch
+  save_strategy: epoch
+  load_best_model_at_end: true
+  metric_for_best_model: f1
+  greater_is_better: true
+  fp16: true
+  threshold: 0.50

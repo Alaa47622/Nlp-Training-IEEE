@@ -1,0 +1,4 @@
+# Optional override file. The main experiment values live in params.yaml.
+experiment:
+  name: distilbert-lora-toxicity
+  description: "Multi-label toxicity classification with LoRA"
