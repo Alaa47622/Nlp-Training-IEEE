@@ -1,4 +1,4 @@
-# Toxic Content Detection — Task 2 + Task 3
+# Toxic Content Detection 
 
 
 Use:
